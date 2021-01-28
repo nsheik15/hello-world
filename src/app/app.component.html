@@ -1,0 +1,6 @@
+<p>Hellow World!!</p>
+  <input type="text" [(ngModel)]="input1">
+  <app-manual-component [dataToChild]="input1" [dataToChild2]="title" (childData)="onChildEvent($event)">
+    <div body>ng-content Works!!</div>
+  </app-manual-component>
+

@@ -1,0 +1,79 @@
+<p class="color">Manual Componet Works!!</p>
+<p> {{word}} </p>
+<input [id]="idName" type="text">
+<button (click)="onButtonClick()">Button</button>
+<div [ngClass]="{'class1': condition, 'class2': !condition}">
+  Class Binding
+</div>
+<div [ngStyle]="textBold">
+  Style Binding
+</div>
+<input type="text" [(ngModel)]="input1">
+{{input1}}
+<div *ngIf="condition">
+  Ng If Works!!
+</div>
+<div *ngFor="let num of arr">
+  {{num}}
+</div>
+<div [ngSwitch]="num">
+  <div *ngSwitchDefault>No Value Matches</div>
+  <div *ngSwitchCase="1">Value is One</div>
+  <div *ngSwitchCase="2">Value is Two</div>
+  <div *ngSwitchCase="3">Value is Three</div>
+</div>
+<p appCustomDirective>
+  Custom Directives
+</p>
+<div>
+  Custom Pipes
+
+  <h2>{{ n1 | uppercase }}</h2>
+  <h2>{{ n1 | lowercase }}</h2>
+  <h2>{{ greet | titlecase }}</h2>
+  <h2>{{ n1 | slice:1:6 }}</h2>
+  <h2>{{ person | json }}</h2>
+
+  <h2>{{ 80.333 | number:'1.2-3' }}</h2>
+  <h2>{{ 80.333 | number:'2.4-5' }}</h2>
+  <h2>{{ 80.333 | number:'3.1-2' }}</h2>
+
+  <h2>{{ 0.79 | percent }}</h2>
+  <h2>{{ 0.79 | currency }}</h2>
+  <h2>{{ 0.79 | currency: 'INR' }}</h2>
+  <h2>{{ 0.79 | currency: 'INR ': 'code' }}</h2>
+
+  <h2>{{ date }}</h2>
+  <h2>{{ date | date: 'short' }}</h2>
+  <h2>{{ date | date: 'longTime' }}</h2>
+  <h2>{{ date | date: 'longDate' }}</h2>
+  <h2>{{ date | date: 'shortTime' }}</h2>
+  <h2>{{ date | date: 'shortDate' }}</h2>
+  <h2>{{ Name | customPipe: '3' }}</h2>
+</div>
+<ng-content select="[body]"></ng-content>
+<button (click)="sendData()">Send Data</button>
+<div #ElRef>
+  View Child
+</div>
+<div *ngFor="let data of arr; let i=index">
+  <input #ElRef1 type="number" [value]="data">
+  <button (click)="changeColor(i)">change color</button>
+</div>
+<input type="number" [(ngModel)]="num1">
+<input type="number" [(ngModel)]="num2">
+<button (click)="add()">Add</button>
+
+{{ sum }}
+
+<div>
+  {{ newObj | json }}
+</div>
+
+<div>
+  <button (click)="getAPIData()">Get API Data</button>
+</div>
+
+<div>
+  {{ apiObj | json }}
+</div>
